@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="languages"/>
+    <button type="button"  onclick="search()"> Tìm kiếm </button>
+    <div id="search">Dịch chữ</div>
+</form>
+<script>
+    let english=["love","always","football","game"]
+    let vietnamemese= ["yêu"," luôn luôn","bóng đá","trò chơi"]
+    function search(){
+        let getvalue = document.getElementById('languages').value
+        for(let i=0;i<english.length;i++){
+            if(getvalue==english[i]){
+                document.getElementById('search').innerHTML= vietnamemese[i]
+            }else if(getvalue==vietnamemese[i]){
+                document.getElementById('search').innerHTML=english[i]
+            }else{
+                alert("không tìm thấy kết quả")
+            }
+
+        }
+    }
+</script>
+
+</body>
+</html>
